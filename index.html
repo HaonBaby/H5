@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<link rel="stylesheet" href="dist/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/denglu.css" />
+</head>
+<body style="background: url(img/222.jpg);">
+<!--楼梯-->
+<ul id="floor">
+	<li>周大福系列</li>
+	<li>枰然心动</li>
+	<li>臻美裸钻</li>
+	<li id="four_qq">福星宝宝</li>
+	<li>花月佳期</li>
+	<li>迪士尼系列</li>
+	<li>大话西游系列</li>
+</ul>
+	
+	
+	
+	
+<!--登录-->
+<div id="regiser">
+	<div id="yincang">
+		<div id="suo_box"></div>
+		<input id="password" type="password" maxlength="16" placeholder="密码"/>
+	</div>
+	<span id="close">×</span>
+	<div id="box">
+		<a id="dt" href="###">动态密码</a>
+		<a id="pd" href="###">普通登录</a>
+		<div id="box_top">			
+		</div>
+		<div id="kk1">
+			<label opacity="1" for="kk1_t"></label>
+			<input type="text" id="kk1_t" maxlength="32" placeholder="手机号/卡号/邮箱"/>
+		</div>
+		<div id="kk2">			
+			<label for="kk1_l"></label>
+			<input type="text" id="kk1_l" maxlength="6" placeholder="请输入6位数字验证码"/>
+			<a id="huoquyanzheng" href="###">获取验证码</a>
+		</div>
+		
+		<div id="zidong">
+			<div id="wangba">温馨提示：请不要在网吧等公共场所勾选此选项</div>
+			<input id="gx" type="checkbox" /><div id="int_box"><b>7天自动登录</b><b>忘记密码?</b></div>			
+		</div>	
+		
+		<input type="submit" id="btn" value="立即登录"/>
+		<div id="box_b">
+			<div class="box_b_1" onclick="tzzhuce()">快速注册</div>
+			<div class="box_b_1">免注册购物</div>
+		</div>
+		
+		<div id="zhi">其它方式登录：<div style="width: 70px;height: 28px;float: right;background: url(img/zhi.jpg) no-repeat -5px 4px;cursor: pointer;"></div></div>
+	</div>	
+</div>
+<div id="dlzzc"></div>
+
+
+
+
+
+<!--注册-->
+<div id="zhuce">
+	<span id="closezhuce">×</span>
+	<b>立即加入周大福</b>
+	<span id="tsxx"></span>
+	<div id="ulbox">
+		<ul id="ulszc">
+		<li id="ulszc_li"><input type="text" id="inpu1" placeholder="手机号/邮箱"/></li>
+		<li id="ulszc_li1"><input type="password" id="inpu2" placeholder="8~16位数字加字母组合密码"/></li>
+		<li><div id="txyzm"><img src="img/0.gif"/></div><input type="text" id="inpu3" placeholder="请输入4位图形验证码"/></li>
+		<li><div id="hqyzm">获取验证码</div><input type="text" id="inpu4" placeholder="请输入6位数字验证码"/></li>
+		</ul>
+	</div>
+	<div id="pb"><p>注册视为同意 </p><h4>《网站条款及隐私条款》</h4></div>
+	<div class="bo">立即注册</div>
+	<div class="bo1" onclick="tzdl()">直接登录</div>	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--header-->
+<div id="header">
+	<div id="header_top">
+		<div id="header_top_l">
+			<a href="#">分店网络</a>
+			<a href="#">手机版
+			<div id="phoneEwm"><img src="img/phoneEwm.jpg" onclick="yidong()"/></div>
+			</a>
+			<a href="#">香港及海外出口</a>
+			<a href="#">企业客定</a>
+			<a href="#">商品核验</a>
+			<a href="#">电票查询</a>
+			
+			
+		</div>
+		
+		<div id="header_top_r">
+				<a id="golds" href="#">
+				今日金价
+				<div id="bigBox">
+					<ul id="ulrow">
+						<li><span>足金零售价</span><b>358.00 </b>元/克</li>
+						<li><span>金条、金章零售价</span><b>348.00 </b>元/克</li>
+						<li><span>投资产品零售价</span><b>318.00 </b>元/克</li>
+						<li><span>e购金零售价</span><b>307.00 </b>元/克</li>
+						<li><span>黄金增值零售价</span><b>316.00 </b>元/克</li>
+						<li><span>e购金换置价</span><b>316.00 </b>元/克</li>
+						<li><span>足金回购价</span><b>257.00 </b>元/克</li>
+						<li><span>金条、金章回购价</span><b>270.00 </b>元/克</li>
+						<li><span>黄金回购价</span><b>230.00 </b>元/克</li>
+					</ul>
+					<div id="lastId"><p>更多金价<img src="img/jt.png" alt="" /></p></div>	
+				</div>	
+							
+			</a>
+			
+			<a onclick="show()" href="#">登录</a>
+			<a onclick="run()" href="#">注册</a>
+		</div>
+	</div>
+	<div id="header_center">
+		<div id="header_center_img">
+			<a href="#"><img src="img/zdf_logo.jpg"/></a>		
+		</div>
+		
+	</div>
+	<div id="header_bottom">
+		<div id="header_bottom_native">			
+			<a href="#">首页</a>
+			<a id="yanchi" href="#">全部商品
+<div id="q">
+		<div id="q1">
+<div class="ulh">
+	<ul class="q1_1"><b>材质</b>
+	<li>黄金</li>
+	<li>钻石</li>
+	<li>铂金</li>
+	<li>K金</li>
+	<li>珍珠</li>
+	<li>银质</li>
+	<li>宝石</li>
+	</ul>
+</div>
+<div class="ulh">
+	<ul class="q1_1"><b>款式</b>
+	<li>戒指</li>
+	<li>项链</li>
+	<li>吊坠</li>
+	<li>耳饰</li>
+	<li>转运珠</li>
+	<li>手链/脚链</li>
+	<li>手镯</li>
+	</ul>
+</div>
+<div class="ulh">
+	<ul class="q1_1"><b>钟表</b>
+	<li>周大福手表</li>
+	<li>名士手表</li>
+	<li>福星宝宝手表</li>
+	<li>天梭手表</li>
+	</ul>
+</div>
+<div class="ulh">
+	<ul class="q1_1"><b>其他</b>
+	<li>金条/金章</li>
+	<li>摆件/礼品</li>
+	<li>儿童首饰</li>
+	<li>SOINLOVE</li>
+	</ul>
+</div>
+
+
+</div>
+<span style="cursor: pointer;"><img src="img/q1.jpg" style="width:100%;height: 100%" /></span>			
+</div>
+	</a>
+			<a onclick="activity()" href="#">热销产品</a>
+<a id="lojy" href="#">黄金
+	<div id="h">
+		<div id="h1">
+			
+			<div class="h1_1">
+				<ul><b>款式</b>
+					<li onclick="ring()">戒指</li>
+					<li>项链</li>
+					<li>吊坠</li>
+					<li>耳饰</li>
+					<li>手链/脚链</li>
+				</ul>
+			</div>
+			
+			<div class="h1_1">
+				<ul><b>推荐</b>
+					<li>小心意</li>
+					<li>水中花</li>
+					<li>怦然系列</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div class="h2">
+			<img src="img/dif.jpg" alt=""  style="width: 100%;height: 100%;"/>
+		</div>
+		
+		<div class="h3" id="h3" onclick="goldNav()">
+			<img src="img/zjy.jpg" alt="" style="width: 100%;height: 100%;" />
+		</div>
+	</div>
+
+</a>
+			<a href="#">钻石</a>
+			<a href="#">婚嫁</a>
+			<a href="#">个性定制</a>
+			<a href="#">会员专区</a>
+			<span></span>
+			
+			
+		
+		</div>
+		<div id="searchText">
+			<input type="text" name="search" id="search" placeholder="春风十里"  />
+			<div id="btns">
+				&nbsp;<a id="aaa" href="###" class="iconfont icon-sousuo" style="font-size: 20px;color: #333333;"></a>
+			</div>
+		</div>	
+		<div id="header_bottom_right">
+			<img src="img/shopCar.jpg" style="width: 100%;"/>
+			<ul id="shopC">
+				<li>暂时还没有商品哦！</li>
+			</ul>
+		</div>
+		<div id="header_bottom_right_two">
+			<img src="img/user.jpg" style="width: 100%;"/>
+			<ul id="userP">
+				<li><a href="#">我的周大福</a></li>
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">我的收藏</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--轮播图-->
+<div id="lunbo">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><a href="#"><img src="img/1.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/2.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/3.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/4.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/5.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/6.jpg"></a></div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- 如果需要导航按钮 -->
+	    <div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>
+</div>
+</div>
+<!--content_photo-->
+<div id="content_photo">
+	<div id="content_photo_t">
+		<img src="img/content_l.gif"/>
+		<img src="img/content_c.png"/>
+		<img src="img/content_r.gif"/>
+	</div>
+</div>
+
+<!--content-->
+<div id="content">
+	<div id="content_one">
+		<div id="imgzs"><a href="#"><img src="img/c1.jpg" style="width: 392px;height: 392px;"/></a>
+			<div id="gengduo">
+			</div>
+			<div id="gengduo1">
+			</div>
+			<div id="gd"><a href="#">更多</a></div>
+			<div id="zzc">	
+			</div>
+		</div>
+		<div><a href="#"><img src="img/c2.png" style="width: 436px;height: 392px;"/></a></div>
+		<div id="imgbb"><a href="#"><img src="img/c3.jpg" style="width: 392px;height: 392px;"/></a>
+			<div id="gengduo2"></div>
+			<div id="gengduo3"></div>
+			<div id="gd1"><a href="#">更多</a></div>
+			<div id="zzc1"></div>		
+		</div>
+	</div>
+	<div id="content_two">
+		
+			<a href="#"><img src="img/t1.jpg" style="width: 392px;height: 392px;"/></a>
+		
+		<a href="#"><img src="img/t2.jpg" style="width: 392px;height: 392px;"/></a>
+		<a href="#"><img src="img/t3.jpg" style="width: 392px;height: 392px;"/></a>
+	</div>
+
+</div>
+
+<div id="content_three">
+	<span>周大福系列产品</span>
+	<hr/>
+	<a id="chanpin" href="#">全部系列产品</a>
+</div>
+
+
+<!--mao-->
+<div id="mao">
+	<div id="mao_p1">
+		<div id="mao_1m1">			
+			<img src="img/20150930050732_5109.jpg" />
+			<img src="img/car.jpg"/>
+			<span>Hello kitty系列</span>			
+		</div>
+	</div>
+	<div id="mao_p2">
+		<div id="mao_1m2">
+			<img src="img/20150930050732_1880.jpg"/>
+			<img src="img/Disney.jpg"/>
+			<span>迪士尼系列</span>
+		</div>
+	</div>	
+	<div id="mao_p3">
+		<div id="mao_1m3">
+			<img src="img/20150930025759_7071.jpg"/>
+			<img src="img/rioTinto.jpg"/>
+			<span>钻石之美</span>
+		</div>
+	</div>
+	<div id="mao_p4">
+		<div id="mao_1m4">
+			<img src="img/20150930030730_8404.jpg"/>
+			<img src="img/Fubao.jpg"/>
+			<span>福星宝宝系列</span>
+		</div>
+	</div>
+	<div id="mao_p5">
+		<div id="mao_1m5">
+			<img src="img/20170728014250_7249.jpg"/>
+			<img src="img/111111.jpg"/>
+			<span>花月佳期系列</span>
+		</div>
+	</div>
+	<div id="mao_p6">
+		<div id="mao_1m6">
+			<img src="img/20170331070600_9488.jpg"/>
+			<img src="img/20170331070600_8703.jpg"/>
+			<span>大话西游系列</span>
+		</div>
+	</div>
+	
+</div>
+
+<!--left-->
+<div id="left">
+	<hr/>
+	<span>美丽人生,永远铭记</span>
+	<p>Beautiful life forever</p>
+</div>
+
+<!--history-->
+<div id="history">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><a href="#"><img src="img/history1.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/history2.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/history3.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="img/history4.jpg"></a></div>
+	        <div class="swiper-slide"><div id="video"><img src="img/history5.jpg"></div></div>
+	     <div class="swiper-slide"><a href="#"><img src="img/history6.jpg"></a></div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- 如果需要导航按钮 -->
+	    <div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>
+	    
+	</div>
+</div>
+<!--视频-->
+<div id="video_box">
+	<a id="video_btn">×</a>
+	<div id="video_area">
+		<video controls width="960" height="540">
+			<source src="src/video.mp4" type="video/mp4"/>
+			Your browser does not support the  video  element. 
+		</video>
+	</div>
+	<div id="video_zzc"></div>
+</div>
+
+
+
+<!--kuli-->
+<div id="kuli">
+	<hr/>
+	<span>库里南遗产，裕世钻芳华</span>
+	<p>《裕世钻芳华》展现周大福对中国文化的推崇及对艺术的热忱，并且彰显周大福钻石专家的地位。<br/>这件价值永恒的稀世珠宝艺术珍品将会成为流芳百世的周大福传世之宝。</p>
+</div>
+
+<!--more-->
+<div id="more">
+	<a href="#">查看更多内容</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<div id="footer">
+	<div id="baoyou">
+		<div id="f1">
+			<img src="img/f1.jpg"/>
+			<div id="f1_1">
+				<h4>包邮保价</h4>
+				<p>
+    顺丰、EMS为您提供快递服务<br/>
+   周大福已为产品购买保险</p>
+			</div>
+		</div>
+		<div id="f1">
+			<img src="img/f2.jpg"/>
+			<div id="f1_1">
+				<h4>全国联保</h4>
+				<p>
+    凭产品及保证单在全国<br/>
+   任何周大福门店均可享受联保服<br/>
+				务</p>
+			</div>
+		</div>
+		<div id="f1">
+			<img src="img/f3.jpg"/>
+			<div id="f1_1">
+				<h4>线上刻字</h4>
+				<p>
+    提供免费刻字服务<br/>
+   为您呈现不一样的服务</p>
+			</div>
+		</div>
+		<div id="f1">
+			<img src="img/f4.jpg"/>
+			<div id="f1_1">
+				<h4>线下服务</h4>
+				<p>
+    全国免费保养<br/>
+   详情请咨询客服</p>
+			</div>
+		</div>
+		<img id="line" src="img/line.jpg"/>
+	</div>
+	<div id="zhinan">
+		<ul id="zhinan_1">
+			<li><span>新手指南</span><a href="#">注册新会员</a><a href="#">购物流程</a></li>
+			<li><span>会员中心</span><a href="#">如何成为会员</a><a href="#">等级/优惠政策</a><a href="#">会员卡申诉</a></li>
+			<li><span>便捷配送</span><a href="#">配送方式</a><a href="#">验货与签收</a></li>
+			<li><span>无忧无虑</span><a href="#">售后服务政策</a><a href="#">退货/换货办理</a><a href="#">商品核验</a><a href="#">订单自助查询</a></li>
+			<li><span>400-166-9999转8</span><a href="#">服务时间9：30-17：30</a><a href="#">周一至周五（节假日除外）</a><a href="#">在线客服</a><a href="#">服务时间8：15-23：45（全年无休）</a></li>
+			<li>总经理信箱</li>
+		</ul>
+	</div>
+	
+	<div id="news">
+		<a href="#">周大福集团资讯</a>
+		<a href="#">新闻动态</a>
+		<a href="#">分店布局</a>
+		<a href="#">条款及细则</a>
+		<a href="#">周大福招聘</a>
+		<a href="#">关于我们</a>
+	</div>
+	
+	<div id="zdf">
+		<div id="zdf_img">
+			<a href="#"><img src="img/zdf_logo.jpg"/></a>
+		</div>		
+	</div>
+	<div id="word">
+		<h3>周大福（股份代号：1929）· 香港主板上市公司</h3>
+		<span>Copyright © 2016深圳市绍福电子商务有限公司版权所有 粤B2-20110210 </span>
+		<span>广东省深圳市盐田区深盐路2011号周大福集团大厦15楼</span>
+		<span>周大福珠宝金行(深圳)有限公司</span>
+		<div id="zhizhao">
+			<div class="b box1">
+				<img src="img/foot5.png" alt="" />
+			</div>
+			<div class="b box2">
+				<img src="img/foot4.jpg" alt="" />
+			</div>
+			<div class="b box3">
+				<img src="img/foot3.png" alt="" />
+			</div>
+			<div class="b box4">
+				<img src="img/foot2.png" alt="" />
+			</div>
+			<div class="b box5">
+				<img src="img/foot1.jpg" alt="" />
+			</div>								
+		</div>
+	</div>
+</div>
+
+<!--右侧滑动-->
+<!--box_r-->
+<div id="box_r">
+	<ul id="box_r_t">
+		<li onclick="ttzz()"><img src="img/sc.jpg"/><span>购物车</span></li>
+		<li><img src="img/ms.jpg"/><span>客服</span></li>
+		<li><img src="img/re.jpg"/><span>反馈</span></li>
+		<li id="hddb" onclick="pageScroll()"><img src="img/roll.jpg"/></li>
+	</ul>
+	<div id="huidaodingbu">
+		回到顶部
+	</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script src="dist/js/swiper.min.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+  // direction: 'vertical', //是否垂直
+loop: true,//是否可以循环拖动
+autoplay:2000,//是否自动播放
+
+//effect : 'fade',
+//fade: {
+//crossFade: false,
+//},
+// 如果需要分页器
+pagination: '.swiper-pagination',
+autoplayDisableOnInteraction : false,
+// 如果需要前进后退按钮
+nextButton: '.swiper-button-next',
+prevButton: '.swiper-button-prev',
+
+// 如果需要滚动条
+  
+  })  
+  
+ 
+
+
+</script>
