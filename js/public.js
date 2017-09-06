@@ -217,8 +217,25 @@ q$("inpu1").onblur=function(){
 	var reg = /(^1[0-9]{10}$)|(^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$)/g;
 	if(reg.test(v)){
 		q$("tsxx").innerHTML=" ";
-		q$("ulszc_li").style.border="none";
 		q$("ulszc_li").style.borderBottom="1px solid #d5d5d5";
+		jQuery.ajax({
+			url:"checkUser.php",
+			async:true,
+			data:"username="+$("inpu1").value,
+			type:"post",
+			success:function(data){
+				//console.log(data+$("mail").value)
+				if(data=="1"){			
+					jQuery("#tsxx").html("该用户已经被注册了");
+					    
+				}else{
+					jQuery("#tsxx").html("该用户没有人使用");
+					//location.href="denglu.html";
+				}
+			}		
+		});
+	}else if(v==""){
+		return;
 	}else{
 		q$("tsxx").innerHTML="!您输入的手机号或邮箱格式不正确";
 		q$("ulszc_li").style.border="1px solid #9e0028";
@@ -232,6 +249,8 @@ q$("inpu2").onblur=function(){
 		q$("tsxx").innerHTML=" ";
 		q$("ulszc_li1").style.border="none";
 		q$("ulszc_li1").style.borderBottom="1px solid #d5d5d5";
+	}else if(m==""){
+		return;
 	}else{
 		q$("tsxx").innerHTML="!密码必须由8-16个英文字母和数字组成";
 		q$("ulszc_li1").style.border="1px solid #9e0028";
@@ -245,13 +264,53 @@ q$("inpu2").onblur=function(){
 
 
 //随机获取图形验证码
-	var num=0;
+	var num=0;	
 	q$("txyzm").onclick=function(){
 		var num=parseInt(Math.random()*10);
-		console.log(num);
-		q$("txyzm").innerHTML="<img src='img/"+num+".gif'/>";		
+		q$("txyzm").innerHTML="<img src='img/"+num+".gif'/>";	
+		
+		
+		q$("inpu3").onblur=function(){		
+		var ar=["DKDK","XMMB","QPZV","TUVG","VWTX","PERC","DAXZ","VJST","UQKE","NHGA"];	
+		var qwq=q$("inpu3").value;
+		var nums=ar[num];
+		if(qwq==nums){
+		q$("tsxx").innerHTML="!验证码正确";
+	}else if(qwq==""){
+		q$("tsxx").innerHTML="请输入验证码";
+	}else{
+		q$("tsxx").innerHTML="!验证码错误";
 	}
+}
+}
+	
 
+
+
+//验证是否通过
+
+$(".bo").click(function(){
+	if(q$("inpu1").value!=""&&q$("inpu2").value!=""&&q$("inpu3").value!=""){
+		jQuery.ajax({
+						url:"zhuceSave.php",
+						async:true,
+						data:"username="+$("inpu1").value+"; &userPass="+$("inpu2").value,
+						type:"post",
+						success:function(data){
+									//console.log(data+$("mail").value)
+									console.log(data)
+									if(data=="1"){
+										
+										location.href="shouye.html";
+									}else{
+										location.href="shouye.html";
+									}
+								}		
+						});
+	}else{
+		q$("tsxx").innerHTML="请填写完整SS信息";
+	}
+});
 
 
 

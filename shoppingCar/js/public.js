@@ -140,6 +140,10 @@ $("body").animate({"scrollTop":"0"},400);
 }
 
 
+function jl_r2(){
+	location.href="../gwc/gwc.html";
+}
+
 //导航栏固定
 window.onscroll=function(){
 	var topH=document.body.scrollTop;
