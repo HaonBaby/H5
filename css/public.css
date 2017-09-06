@@ -24,6 +24,7 @@ a{
 	
 }
 #floor li{
+	font-weight: 700;
 	float: right;
 	width: 90px;
 	height: 30px;

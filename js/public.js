@@ -96,7 +96,7 @@ q$("lojy").onmouseenter=function(){
 
 
 q$("header_bottom_right").onclick=function(){
-	location.href="shoppingCar/shoppingCar.html";
+	location.href="gwc/gwc.html";
 }
 
 
